@@ -21,7 +21,7 @@
 	
 	<Canvas Tag="item">
 		<Border Tag="item" BorderBrush="Aquamarine" BorderThickness="2" Width="192" Height="142" Canvas.Top="4" Canvas.Left="4">
-			<Grid Tag="item" RowDefinitions="auto,auto,auto" Background="#CFE" Name="sp_grid">
+			<Grid Tag="item" RowDefinitions="auto,auto,auto" Background="#4682B4" Name="sp_grid">
 				<StackPanel Tag="item"/>
 				<StackPanel Tag="item" Grid.Row="1"/>
 				<StackPanel Tag="item" Grid.Row="2"/>
@@ -29,7 +29,6 @@
 		</Border>
 		<Image Tag="deleter" Width="24" Height="24" Source="avares://DiagramEditor/Assets/del.png" Canvas.Left="6" Canvas.Bottom="6"/>
 		<Image Tag="resizer" Width="24" Height="24" Source="avares://DiagramEditor/Assets/res.png" Canvas.Right="6" Canvas.Bottom="6"/>
-		<!-- Военная хитрость ;'-} Без Fill не будут отрабатывать обработчики мыши. -->
 		<Rectangle Tag="field" Width="200" Height="10"/>
 		<Rectangle Tag="field" Width="10" Height="150"/>
 		<Rectangle Tag="field" Width="10" Height="150" Canvas.Right="0"/>

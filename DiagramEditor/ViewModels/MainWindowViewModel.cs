@@ -218,7 +218,7 @@ namespace DiagramEditor.ViewModels {
             menu = null;
         }
         private void FuncClear() {
-            Name = "yeah";
+            Name = "May be..";
             stereo = 0;
             access = 0;
             attributes.Clear();

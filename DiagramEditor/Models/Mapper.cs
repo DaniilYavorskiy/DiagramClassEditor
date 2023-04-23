@@ -12,7 +12,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace DiagramEditor.Models {
+namespace DiagramEditor.Models
+{
     public class Mapper {
         readonly Ellipse marker = new() { Tag = "marker", Stroke = Brushes.Orange, Fill = Brushes.Yellow, StrokeThickness = 2, Width = 12, Height = 12, ZIndex = 2, IsVisible = false };
         readonly ArrowFactory marker2 = new() { Tag = "marker2", ZIndex = 2, IsVisible = false };
@@ -293,17 +294,17 @@ namespace DiagramEditor.Models {
             switch (type) {
             case "JSON":
                 var json = Utils.Obj2json(data);
-                if (json == null) { Log.Write("Не удалось экспортировать в Export.json :/"); return; }
+                if (json == null) { Log.Write("Ошибка! Не получилось экспортировать в Export.json :/"); return; }
                 File.WriteAllText("../../../Export.json", json);
                 break;
             case "XML":
                 var xml = Utils.Obj2xml(data);
-                if (xml == null) { Log.Write("Не удалось экспортировать в Export.xml :/"); return; }
+                if (xml == null) { Log.Write("Ошибка! Не получилось экспортировать в Export.xml :/"); return; }
                 File.WriteAllText("../../../Export.xml", xml);
                 break;
             case "YAML":
                 var yaml = Utils.Obj2yaml(data);
-                if (yaml == null) { Log.Write("Не удалось экспортировать в Export.yaml :/"); return; }
+                if (yaml == null) { Log.Write("Ошибка! Не получилось экспортировать в Export.yaml :/"); return; }
                 File.WriteAllText("../../../Export.yaml", yaml);
                 break;
             }
